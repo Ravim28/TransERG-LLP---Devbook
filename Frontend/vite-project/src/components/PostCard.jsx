@@ -1,6 +1,7 @@
 import { getUser, getToken } from "../utils/auth";
 import axios from "axios";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 function PostCard({ post, onDelete, onEdit }) {
   const user = getUser();
@@ -53,8 +54,9 @@ function PostCard({ post, onDelete, onEdit }) {
       <h3 className="text-2xl font-bold text-gray-800 mb-3">{post.title}</h3>
 
       <p className="text-gray-700 mb-4 whitespace-pre-wrap leading-relaxed">
-        {post.content}
-      </p>
+<ReactMarkdown>
+  {post.content}
+</ReactMarkdown>      </p>
 
       <div className="text-sm text-gray-500 mb-1">
         <span className="mr-4">
