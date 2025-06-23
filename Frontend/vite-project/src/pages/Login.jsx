@@ -38,8 +38,8 @@ function Login({ setUser, setLoggedIn }) {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-white px-4">
-      <div className="w-full max-w-xl p-8 bg-white rounded-2xl shadow-2xl transition-all duration-300">
+    <div className="h-[800px] flex items-center justify-center bg-white mt-6">
+      <div className="w-full max-w-xl p-8 bg-white rounded-2xl shadow-2xl transition-all">
         <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">
           Welcome Back 👋
         </h2>

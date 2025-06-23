@@ -103,8 +103,13 @@ const [user, setUser] = useState(getUser());
     <Router>
       <Navbar user={user} loggedIn={loggedIn} setUser={setUser} setLoggedIn={setLoggedIn} />
       <div className="p-6">
-   <Suspense fallback={<div className="text-center py-10 text-blue-600 font-semibold">Loading...</div>}>
-  <Routes>
+<Suspense
+  fallback={
+    <div className="flex items-center justify-center h-screen">
+      <div className="text-2xl text-blue-600 font-semibold animate-pulse">Loading...</div>
+    </div>
+  }
+>  <Routes>
     {/* 👇 Default route redirected to Explore page */}
     <Route path="/" element={<Navigate to="/explore" />} />
 
